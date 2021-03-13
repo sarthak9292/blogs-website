@@ -55,7 +55,7 @@ def home():
     if(not str(page).isnumeric()):
         page= 1
     page = int(page)
-    posts = posts[(page-1)*int(params['no_of_posts']): (page-1)*int(params['no_of_posts']) + int(params['no_of_posts'])]
+    posts = posts[(-1)*(page-1)*int(params['no_of_posts']) -1 : ((-1)*(page-1)*int(params['no_of_posts']) -1) - int(params['no_of_posts']) : -1]
 
     if(page==1):
         prevp = "#"
